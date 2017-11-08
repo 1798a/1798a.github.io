@@ -2,16 +2,27 @@
 <html>
   <head>
     <meta charset = "utf-8" />
+    <meta name ="viewport" content ="width=device-width , user-scalable=no"/>
     <title>这是不一样的我</title>
+    <script>
+      setRem();
+      window.addEventListener('orientationchange',setRem);
+     window.addEventListener('resize',setRem);
+      function setRem(){
+        var html = document.querySelector('html');
+        var width = html.queryBoundingClientRect().width;
+        html.style.font-size = width/16 + "px";
+      }
+    </script>
   </head>
   <body>
     <div>
       <div style="width:40% ；float:left">
-        姓名：刘建鹏
+        姓名：某某
         年龄：22
       </div>
        <div style="width:50% ;float:right">
-        姓名：刘建鹏
+        姓名：某某
         年龄：22
       </div>
     </div>
